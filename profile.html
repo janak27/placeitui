@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" /> -->
   <title>PlaceIt</title>
   <link rel="stylesheet" href="input.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
@@ -82,23 +83,63 @@
 
   <!-- profile  -->
 
-  <div class="flex flex-wrap items-center justify-center border-2 border-black">
-    <div class=" border-2 border-black container bg-white  shadow-lg transform duration-200 easy-in-out mx-20">
-      <div class="sm:h-64 max-w-full overflow-hidden">
-        <img class="w-full rounded-2xl"
+  <div class="flex flex-wrap items-center justify-center">
+    <div class=" container bg-white shadow-lg transform duration-200 easy-in-out mx-24">
+      <div class="sm:h-96 max-w-full overflow-hidden">
+        <img class="w-full rounded-t"
           src="/img/thumb2-donald-duck-art-blue-background-cartoon-character-creative-art.jpg"
           alt="Photo by aldi sigun on Unsplash" />
       </div>
-      <div class="flex justify-start px-16 -mt-10 mb-5">
-        <span clspanss="block relative h-32 w-32">
+      <div class="flex  px-16 items-center -mt-24 mb-0">
+        <div class="block relative h-48 w-48">
           <img alt="Photo by aldi sigun on Unsplash"
             src="/img/thumb2-donald-duck-art-blue-background-cartoon-character-creative-art.jpg"
-            class="mx-auto object-cover rounded-full h-24 w-24 bg-white p-1" />
-        </span>
+            class="mx-auto object-cover rounded-full h-48 w-48 bg-white p-1" />
+        </div>
+      </div>
+      <div class=" ">
+        <div class="name font-semibold text-xl md:text-3xl mx-10 mt-4 mx-auto">
+          Amruta Subhash Dange
+        </div>
+        <ul class="max-w-3xl">
+          <li class="flex justify-items-start space-x-4 mx-10 my-4">
+            <i class='bx bxs-envelope text-2xl'></i>
+            <p class="text-sm md:text-xl">Department of Information Technology</p>
+          </li>
+          <li class="flex justify-items-start space-x-4 mx-10 my-4 ">
+            <i class='bx bxs-graduation text-2xl'></i>
+            <a class="text-sm text-indigo-700 md:text-xl"  href="#link">amruta.dange-coemumbai@bvp.edu.in</a>
+          </li>
+          <li class="flex justify-items-start space-x-4 mx-10 my-4">
+            <i class='bx bxs-graduation text-2xl '></i>
+            <p class="text-sm md:text-xl">Strong in design and integration with intuitive problem-solving skills. Proficient in JAVA, C#, PYTHON, JAVASCRIPT, and SQL. Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions. Looking to start the career as an entry-level software engineer with a reputed firm driven by technology.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a
+          href="#"
+          class="py-4 px-2 text-indigo-500 border-b-4 border-indigo-500 font-semibold"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+          >Feed</a
+        >
+        <a
+          href="#"
+          class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+          >profile</a
+        >
+        <a
+          href="#"
+          class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+          >Settings</a
+        >
       </div>
     </div>
   </div>
-  
 
   <!-- foooter -->
 
@@ -180,7 +221,6 @@
       menu.classList.toggle("hidden");
     });
   </script>
-  <!-- <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script> -->
 </body>
 
 </html>

@@ -25,7 +25,7 @@
           <div class="flex">
             <div>
               <!-- Website Logo -->
-              <a href="#" class="flex items-center py-4 px-2">
+              <a href="#" class="flex items-center p-2">
                 <img src="./img/logo.png" alt="Logo" class="h-8" />
               </a>
             </div>
@@ -57,12 +57,12 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="#"
-              class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
+              class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
               >Log In</a
             >
             <a
               href="#"
-              class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
+              class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
               >Sign up</a
             >
           </div>
@@ -246,12 +246,12 @@
             aria-labelledby="profile-tab"
           >
             <div class="text-gray-900">
+              <div
+                class="name font-semibold text-xl md:text-2xl mx-10 mb-4 mx-auto"
+              >
+                Name Details :
+              </div>
               <ul class="flex flex-col max-w-6xl">
-                <div
-                  class="name font-semibold text-xl md:text-2xl mx-10 mb-4 mx-auto"
-                >
-                  Name Details :
-                </div>
                 <li
                   class="flex px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
                 >
@@ -273,10 +273,10 @@
               </ul>
               <ul class="flex flex-col md:flex-col flex-row max-w-6xl">
                 <li
-                  class="flex  px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
+                  class="flex px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
                 >
                   <i
-                    class="bx bxs-envelope text-sm md:text-xl "
+                    class="bx bxs-envelope text-sm md:text-xl"
                     style="color: #ebe417"
                   ></i>
                   <a href="#" class="font-bold text-sm md:text-xl">
@@ -287,7 +287,7 @@
                   class="flex px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
                 >
                   <i
-                    class="bx bxl-linkedin-square text-xl "
+                    class="bx bxl-linkedin-square text-xl"
                     style="color: #0077b5"
                   ></i>
                   <a href="#" class="font-bold text-sm md:text-xl">
@@ -295,12 +295,9 @@
                   </a>
                 </li>
                 <li
-                  class="flex  px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
+                  class="flex px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
                 >
-                  <i
-                    class="bx bxl-github text-xl "
-                    style="color: black"
-                  ></i>
+                  <i class="bx bxl-github text-xl" style="color: black"></i>
                   <a href="#" class="font-bold text-sm md:text-xl">
                     github.com/in/amruta-dange/
                   </a>
@@ -309,34 +306,121 @@
             </div>
           </div>
           <div
-            class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+            class="hidden p-4 rounded-lg"
             id="dashboard"
             role="tabpanel"
             aria-labelledby="dashboard-tab"
           >
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              This is some placeholder content the
-              <strong class="font-medium text-gray-800 dark:text-white"
-                >Dashboard tab's associated content</strong
-              >. Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
+            <div
+              class="name font-semibold text-xl md:text-2xl mx-10 mb-4 mx-auto"
+            >
+              CGPA Details :
+            </div>
+            <div class="container flex sm:flex-row flex-col flex-wrap">
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 1: 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 2 : 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 3 : 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 4 : 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 5: 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 6 : 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 7 : 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/5"
+              >
+                <p>sem 8 : 9.8</p>
+              </div>
+            </div>
+            <div
+              class="name font-semibold text-xl md:text-2xl mx-10 my-4 mx-auto"
+            >
+              Academics Details :
+            </div>
+            <div class="container flex sm:flex-row flex-col flex-wrap">
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/3"
+              >
+                <p>10th Score : 9.8</p>
+              </div>
+              <div
+                class="mx-2 my-2 flex items-center justify-center border-2 border-indigo-700 p-2 rounded-2xl basis-1/3"
+              >
+                <p>12th Score : 9.8</p>
+              </div>
+            </div>
           </div>
           <div
-            class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+            class="hidden p-4 rounded-lg"
             id="settings"
             role="tabpanel"
             aria-labelledby="settings-tab"
           >
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              This is some placeholder content the
-              <strong class="font-medium text-gray-800 dark:text-white"
-                >Settings tab's associated content</strong
-              >. Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
+            <div class="mx-10">
+              <div
+                class="flex flex-wrap flex-row border-4 justify-center border-blue-900 rounded-2xl"
+              >
+                <div class=" flex flex-col mx-14 items-center flex justify-center basis-1/3">
+                  <ul class="">
+                    <div
+                      class="mx-2 my-2 flex text-white font-extrabold bg-indigo-700 p-2 rounded-2xl"
+                    >
+                      <p class="mx-2">JIO infotech</p>
+                    </div>
+                    <li class="flex justify-items-start space-x-4 mx-10 my-4">
+                      <i class="bx bxs-calendar text-2xl"></i>
+                      <p class="text-sm md:text-xl">9/11/2022</p>
+                    </li>
+                    <li class="flex justify-items-start space-x-4 mx-10 my-4">
+                      <i class="bx bx-data text-2xl"></i>
+                      <p class="text-sm md:text-xl">SDE-3</p>
+                    </li>
+                    <li class="flex justify-items-start space-x-4 mx-10 my-4">
+                      <i class="bx bx-dollar-circle text-2xl"></i>
+                      <p class="text-sm md:text-xl">6 LPA</p>
+                    </li>
+                    <li class="flex justify-items-start space-x-4 mx-10 my-4">
+                      <i class="bx bx-user-circle text-2xl"></i>
+                      <p class="text-sm md:text-xl">Mr. Gautam Adani</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mx-8 my-10 h-30 flex flex-col  basis-1/2">
+                  <div
+                      class=" mx-2 p-20 my-2 grid h-30 place-items-center text-indigo-700 font-extrabold border-4 border-indigo-700 p-2 rounded-2xl"
+                    >
+                    <i class='bx bx-upload text-5xl' ></i>
+                      <p class="">Upload offer letter</p>
+                    </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div
             class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"

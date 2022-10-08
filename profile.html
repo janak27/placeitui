@@ -175,26 +175,8 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="flex items-center justify-between mx-0 md:mx-48">
-        <a
-          href="#"
-          class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
-          >Personal</a
-        >
-        <a
-          href="#"
-          class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
-          >Education </a
-        >
-        <a
-          href="#"
-          class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
-          >Company</a
-        >
-      </div> -->
-
         <div
-          class="flex mb-4 border-b border-gray-200 dark:border-gray-700 px-2 justify-center"
+          class="flex mb-4 border-b- border-gray-200 dark:border-gray-700 justify-center"
         >
           <ul
             class="flex space-x-2 sm:space-x-4 -mb-px text-sm font-medium text-center"
@@ -212,7 +194,7 @@
                 aria-controls="profile"
                 aria-selected="true"
               >
-                Profile
+                Personal
               </button>
             </li>
             <li class="mr-2" role="presentation">
@@ -225,7 +207,7 @@
                 aria-controls="dashboard"
                 aria-selected="false"
               >
-                Dashboard
+                Education
               </button>
             </li>
             <li class="mr-2" role="presentation">
@@ -238,7 +220,7 @@
                 aria-controls="settings"
                 aria-selected="false"
               >
-                Settings
+                Company
               </button>
             </li>
             <li role="presentation">
@@ -251,26 +233,80 @@
                 aria-controls="contacts"
                 aria-selected="false"
               >
-                Contacts
+                Resume
               </button>
             </li>
           </ul>
         </div>
         <div id="myTabContent">
           <div
-            class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800"
+            class="p-4 rounded-lg"
             id="profile"
             role="tabpanel"
             aria-labelledby="profile-tab"
           >
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              This is some placeholder content the
-              <strong class="font-medium text-gray-800 dark:text-white"
-                >Profile tab's associated content</strong
-              >. Clicking another tab will toggle the visibility of this one for
-              the next. The tab JavaScript swaps classes to control the content
-              visibility and styling.
-            </p>
+            <div class="text-gray-900">
+              <ul class="flex flex-col md:flex-col flex-row max-w-6xl">
+                <div
+                  class="name font-semibold text-xl md:text-2xl mx-10 mb-4 mx-auto"
+                >
+                  Name Details :
+                </div>
+                <li
+                  class="flex px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-2xl rounded-3xl border-gray-500"
+                >
+                  <p class="text-sm md:text-xl">FirstName :</p>
+                  <p class="font-bold text-sm md:text-xl">Amruta</p>
+                </li>
+                <li
+                  class="flex px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-2xl rounded-3xl border-gray-500"
+                >
+                  <p class="text-sm md:text-xl">MiddleName :</p>
+                  <p class="font-bold text-sm md:text-xl">Surendra</p>
+                </li>
+                <li
+                  class="flex px-10 space-x-4 mx-10 my-2 py-2 border-4 max-w-2xl rounded-3xl border-gray-500"
+                >
+                  <p class="text-sm md:text-xl">Surname :</p>
+                  <p class="font-bold text-sm md:text-xl">Dange</p>
+                </li>
+              </ul>
+              <ul class="flex flex-col md:flex-col flex-row max-w-6xl">
+                <li
+                  class="flex  px-10 space-x-8 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
+                >
+                  <i
+                    class="bx bxs-envelope text-sm md:text-xl "
+                    style="color: #5e17eb"
+                  ></i>
+                  <a href="#" class="font-bold text-sm md:text-xl">
+                    amudange@gmail.com
+                  </a>
+                </li>
+                <li
+                  class="flex px-10 space-x-8 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
+                >
+                  <i
+                    class="bx bxl-linkedin-square text-sm md:text-xl "
+                    style="color: #5e17eb"
+                  ></i>
+                  <a href="#" class="font-bold text-sm md:text-xl">
+                    amudange@gmail.com
+                  </a>
+                </li>
+                <li
+                  class="flex  px-10 space-x-8 mx-10 my-2 py-2 border-4 max-w-xl rounded-3xl border-gray-500"
+                >
+                  <i
+                    class="bx bxl-gmail text-sm md:text-xl "
+                    style="color: #5e17eb"
+                  ></i>
+                  <a href="#" class="font-bold text-sm md:text-xl">
+                    amudange@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div
             class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800"

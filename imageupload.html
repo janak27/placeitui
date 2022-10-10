@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PlaceIt</title>
+    <link rel="stylesheet" href="input.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+
+    <style>
+      .hasImage:hover section {
+        background-color: rgba(5, 5, 5, 0.4);
+      }
+      .hasImage:hover button:hover {
+        background: rgba(5, 5, 5, 0.45);
+      }
+
+      #overlay p,
+      i {
+        opacity: 0;
+      }
+
+      #overlay.draggedover {
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      #overlay.draggedover p,
+      #overlay.draggedover i {
+        opacity: 1;
+      }
+
+      .group:hover .group-hover\:text-blue-800 {
+        color: #2b6cb0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between space-x-12">
+          <div class="flex">
+            <div>
+              <!-- Website Logo -->
+              <a href="#" class="flex items-center p-2">
+                <img src="./img/logo.png" alt="Logo" class="h-8" />
+              </a>
+            </div>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a
+              href="/index.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+              >Home</a
+            >
+            <a
+              href="/feed.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+              >Feed</a
+            >
+            <a
+              href="/profile.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+              >profile</a
+            >
+            <a
+              href=""
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+              >Settings</a
+            >
+          </div>
+          <!-- Secondary Navbar items -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
+              >Log In</a
+            >
+            <a
+              href="#"
+              class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
+              >Sign up</a
+            >
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-6 h-6 text-gray-500 hover:text-indigo-500"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+
+      <div class="hidden mobile-menu">
+        <ul class="flex flex-col">
+          <li class="active">
+            <a
+              href="index.html"
+              class="block text-white hover:bg-indigo-500 text-sm px-14 py-4 hover:text-white bg-indigo-500 font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="block font-semibold hover:bg-indigo-500 hover:text-white text-sm px-14 py-4 transition duration-300"
+              >Settings</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- image  -->
+    <div class="mx-2 my-10 flex flex-col flex-wrap">
+      <div
+        class="px-5 mx-10 max-w-fit border-b-4 text-3xl border-indigo-700 font-bold"
+      >
+      Image Upload 
+      </div>
+
+      <!-- component -->
+      <div class="h-screen max-w-screen  sm:px-8 md:px-16 sm:py-8 ">
+        <main class="container border-2 border-blue-500 mx-auto  h-full">
+          <!-- file upload modal -->
+          <article
+            aria-label="File Upload Modal"
+            class="relative h-full flex flex-col bg-white shadow-xl rounded-md"
+            ondrop="dropHandler(event);"
+            ondragover="dragOverHandler(event);"
+            ondragleave="dragLeaveHandler(event);"
+            ondragenter="dragEnterHandler(event);"
+          >
+            <!-- overlay -->
+            <div
+              id="overlay"
+              class="w-full h-full absolute top-0 left-0 pointer-events-none z-50 flex flex-col items-center justify-center rounded-md"
+            >
+              <i>
+                <svg
+                  class="fill-current w-12 h-12 mb-3 text-blue-700"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479-1.092l4 4h-3v4h-2v-4h-3l4-4z"
+                  />
+                </svg>
+              </i>
+              <p class="text-lg text-blue-700">Drop files to upload</p>
+            </div>
+
+            <!-- scroll area -->
+            <section
+              class="h-full overflow-auto p-8 w-full h-full flex flex-col"
+            >
+              <header
+                class="border-dashed border-2 border-gray-400 py-12 flex flex-col justify-center items-center"
+              >
+                <p
+                  class="mb-3 font-semibold text-gray-900 flex flex-wrap justify-center"
+                >
+                  <span>Drag and drop your</span>&nbsp;<span
+                    >Profile picture </span
+                  >
+                </p>
+                <input id="hidden-input" type="file" multiple class="hidden" />
+                <button
+                  id="button"
+                  class="mt-2 rounded-full px-5 py-2 bg-indigo-700 text-white"
+                >
+                  Upload a file
+                </button>
+              </header>
+
+              <h1 class="pt-8 pb-3 font-semibold sm:text-lg text-gray-900">
+                To Upload
+              </h1>
+
+              <ul id="gallery" class="flex flex-1 flex-wrap -m-1">
+                <li
+                  id="empty"
+                  class="h-full w-full text-center flex flex-col items-center justify-center items-center"
+                >
+                  <img
+                    class="mx-auto w-32"
+                    src="https://user-images.githubusercontent.com/507615/54591670-ac0a0180-4a65-11e9-846c-e55ffce0fe7b.png"
+                    alt="no data"
+                  />
+                  <span class="text-small text-gray-500"
+                    >No files selected</span
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <!-- sticky footer -->
+            <footer class="flex justify-end px-8 pb-8 pt-4">
+              <button
+                id="submit"
+                class="rounded-full px-5 py-2 bg-indigo-700 text-white"
+              >
+                Upload now
+              </button>
+              <button
+                id="cancel"
+                class="ml-3 rounded-sm px-3 py-1 hover:bg-gray-300 focus:shadow-outline focus:outline-none"
+              >
+                Cancel
+              </button>
+            </footer>
+          </article>
+        </main>
+      </div>
+
+      <!-- using two similar templates for simplicity in js code -->
+      <template id="file-template">
+        <li class="block p-1 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-1/8 h-24">
+          <article
+            tabindex="0"
+            class="group w-full h-full rounded-md focus:outline-none focus:shadow-outline elative bg-gray-100 cursor-pointer relative shadow-sm"
+          >
+            <img
+              alt="upload preview"
+              class="img-preview hidden w-full h-full sticky object-cover rounded-md bg-fixed"
+            />
+
+            <section
+              class="flex flex-col rounded-md text-xs break-words w-full h-full z-20 absolute top-0 py-2 px-3"
+            >
+              <h1 class="flex-1 group-hover:text-blue-800"></h1>
+              <div class="flex">
+                <span class="p-1 text-blue-800">
+                  <i>
+                    <svg
+                      class="fill-current w-4 h-4 ml-auto pt-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15 2v5h5v15h-16v-20h11zm1-2h-14v24h20v-18l-6-6z"
+                      />
+                    </svg>
+                  </i>
+                </span>
+                <p class="p-1 size text-xs text-gray-700"></p>
+                <button
+                  class="delete ml-auto focus:outline-none hover:bg-gray-300 p-1 rounded-md text-gray-800"
+                >
+                  <svg
+                    class="pointer-events-none fill-current w-4 h-4 ml-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="pointer-events-none"
+                      d="M3 6l3 18h12l3-18h-18zm19-4v2h-20v-2h5.711c.9 0 1.631-1.099 1.631-2h5.316c0 .901.73 2 1.631 2h5.711z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </section>
+          </article>
+        </li>
+      </template>
+
+      <template id="image-template">
+        <li class="block p-1 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-1/8 h-24">
+          <article
+            tabindex="0"
+            class="group hasImage w-full h-full rounded-md focus:outline-none focus:shadow-outline bg-gray-100 cursor-pointer relative text-transparent hover:text-white shadow-sm"
+          >
+            <img
+              alt="upload preview"
+              class="img-preview w-full h-full sticky object-cover rounded-md bg-fixed"
+            />
+
+            <section
+              class="flex flex-col rounded-md text-xs break-words w-full h-full z-20 absolute top-0 py-2 px-3"
+            >
+              <h1 class="flex-1"></h1>
+              <div class="flex">
+                <span class="p-1">
+                  <i>
+                    <svg
+                      class="fill-current w-4 h-4 ml-auto pt-"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M5 8.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5zm9 .5l-2.519 4-2.481-1.96-4 5.96h14l-5-8zm8-4v14h-20v-14h20zm2-2h-24v18h24v-18z"
+                      />
+                    </svg>
+                  </i>
+                </span>
+
+                <p class="p-1 size text-xs"></p>
+                <button
+                  class="delete ml-auto focus:outline-none hover:bg-gray-300 p-1 rounded-md"
+                >
+                  <svg
+                    class="pointer-events-none fill-current w-4 h-4 ml-auto"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      class="pointer-events-none"
+                      d="M3 6l3 18h12l3-18h-18zm19-4v2h-20v-2h5.711c.9 0 1.631-1.099 1.631-2h5.316c0 .901.73 2 1.631 2h5.711z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </section>
+          </article>
+        </li>
+      </template>
+    </div>
+
+    <!-- foooter -->
+
+    <div
+      class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-2"
+    >
+      <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="sm:col-span-2">
+          <img src="./img/logo.png" alt="Logo" class="h-12" />
+          <div class="mt-6 lg:max-w-sm">
+            <p class="text-base text-gray-800">
+              We are here to solve your Datasheet problems..
+            </p>
+            <p class="mt-4 text-base text-gray-800">
+              Providing smooth Placement Data integration for the students and
+              colleges.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-2 text-base">
+          <p class="text-xl font-bold tracking-wide text-gray-900">Contacts</p>
+          <div class="flex">
+            <p class="mr-1 text-gray-800">Email:</p>
+            <a
+              href="mailto:placeit@gmail.com"
+              aria-label="Our email"
+              title="Our email"
+              class="transition-colors duration-300 text-indigo-700"
+              >placeit@gmail.com</a
+            >
+          </div>
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-wide text-gray-900"
+            >Social</span
+          >
+          <div class="flex items-center mt-1 space-x-3">
+            <a
+              href="/"
+              class="text-sky-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                <path
+                  d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="/"
+              class="text-gray-900 transition-colors duration-300 hover:text-deep-purple-accent-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1)"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <p class="mt-4 text-base text-indigo-700">
+            we are still building the stuff, so you can point out the outflows
+            to help us, Thank You.
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row"
+      >
+        <p class="text-sm text-gray-600">
+          © Copyright 2020 Lorem Inc. All rights reserved.
+        </p>
+        <ul
+          class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row"
+        >
+          <li>
+            <a
+              href="/"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+              >F.A.Q</a
+            >
+          </li>
+          <li>
+            <a
+              href="/"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+              >Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a
+              href="/"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
+              >Terms &amp; Conditions</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+    <script>
+      const fileTempl = document.getElementById("file-template"),
+        imageTempl = document.getElementById("image-template"),
+        empty = document.getElementById("empty");
+
+      // use to store pre selected files
+      let FILES = {};
+
+      // check if file is of type image and prepend the initialied
+      // template to the target element
+      function addFile(target, file) {
+        const isImage = file.type.match("image.*"),
+          objectURL = URL.createObjectURL(file);
+
+        const clone = isImage
+          ? imageTempl.content.cloneNode(true)
+          : fileTempl.content.cloneNode(true);
+
+        clone.querySelector("h1").textContent = file.name;
+        clone.querySelector("li").id = objectURL;
+        clone.querySelector(".delete").dataset.target = objectURL;
+        clone.querySelector(".size").textContent =
+          file.size > 1024
+            ? file.size > 1048576
+              ? Math.round(file.size / 1048576) + "mb"
+              : Math.round(file.size / 1024) + "kb"
+            : file.size + "b";
+
+        isImage &&
+          Object.assign(clone.querySelector("img"), {
+            src: objectURL,
+            alt: file.name,
+          });
+
+        empty.classList.add("hidden");
+        target.prepend(clone);
+
+        FILES[objectURL] = file;
+      }
+
+      const gallery = document.getElementById("gallery"),
+        overlay = document.getElementById("overlay");
+
+      // click the hidden input of type file if the visible button is clicked
+      // and capture the selected files
+      const hidden = document.getElementById("hidden-input");
+      document.getElementById("button").onclick = () => hidden.click();
+      hidden.onchange = (e) => {
+        for (const file of e.target.files) {
+          addFile(gallery, file);
+        }
+      };
+
+      // use to check if a file is being dragged
+      const hasFiles = ({ dataTransfer: { types = [] } }) =>
+        types.indexOf("Files") > -1;
+
+      // use to drag dragenter and dragleave events.
+      // this is to know if the outermost parent is dragged over
+      // without issues due to drag events on its children
+      let counter = 0;
+
+      // reset counter and append file to gallery when file is dropped
+      function dropHandler(ev) {
+        ev.preventDefault();
+        for (const file of ev.dataTransfer.files) {
+          addFile(gallery, file);
+          overlay.classList.remove("draggedover");
+          counter = 0;
+        }
+      }
+
+      // only react to actual files being dragged
+      function dragEnterHandler(e) {
+        e.preventDefault();
+        if (!hasFiles(e)) {
+          return;
+        }
+        ++counter && overlay.classList.add("draggedover");
+      }
+
+      function dragLeaveHandler(e) {
+        1 > --counter && overlay.classList.remove("draggedover");
+      }
+
+      function dragOverHandler(e) {
+        if (hasFiles(e)) {
+          e.preventDefault();
+        }
+      }
+
+      // event delegation to caputre delete events
+      // fron the waste buckets in the file preview cards
+      gallery.onclick = ({ target }) => {
+        if (target.classList.contains("delete")) {
+          const ou = target.dataset.target;
+          document.getElementById(ou).remove(ou);
+          gallery.children.length === 1 && empty.classList.remove("hidden");
+          delete FILES[ou];
+        }
+      };
+
+      // print all selected files
+      document.getElementById("submit").onclick = () => {
+        alert(`Submitted Files:\n${JSON.stringify(FILES)}`);
+        console.log(FILES);
+      };
+
+      // clear entire selection
+      document.getElementById("cancel").onclick = () => {
+        while (gallery.children.length > 0) {
+          gallery.lastChild.remove();
+        }
+        FILES = {};
+        empty.classList.remove("hidden");
+        gallery.append(empty);
+      };
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  </body>
+</html>

@@ -1,208 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>PlaceIt</title>
-    <link rel="stylesheet" href="input.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
-  </head>
 
-  <body>
-    <!-- Navbar goes here -->
-    <nav class="bg-white shadow-lg">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="flex justify-between space-x-12">
-          <div class="flex">
-            <div>
-              <!-- Website Logo -->
-              <a href="/index.html" class="flex items-center py-4 px-2">
-                <img src="./img/logo.png" alt="Logo" class="h-8" />
-              </a>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>PlaceIt</title>
+  <link rel="stylesheet" href="input.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+</head>
+
+<body>
+  <!-- Navbar goes here -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between space-x-12">
+        <div class="flex">
+          <div>
+            <!-- Website Logo -->
+            <a href="/index.html" class="flex items-center py-4 px-2">
+              <img src="./img/logo.png" alt="Logo" class="h-8" />
+            </a>
           </div>
-          <!-- Primary Navbar items -->
-          <div class="hidden md:flex items-center space-x-4">
-            <a
-              href="/index.html"
-              class="py-4 px-2 text-indigo-500 border-b-4 border-indigo-500 font-semibold"
-              >Home</a
-            >
-            <a
-              href="/feed.html"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
-              >Feed</a
-            >
-            <a
-              href="/avtar.html"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
-              >profile</a
-            >
-            <a
-              href="/settings.html"
-              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
-              >Settings</a
-            >
-          </div>
-          <!-- Secondary Navbar items -->
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="/login.html"
-              class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
-              >Log In</a
-            >
-            <a
-              href="/profile.html"
-              class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
-              >Sign up</a
-            >
-          </div>
-          <!-- Mobile menu button -->
-          <div class="md:hidden flex items-center">
-            <button class="outline-none mobile-menu-button">
-              <svg
-                class="w-6 h-6 text-gray-500 hover:text-indigo-500"
-                x-show="!showMenu"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
+        </div>
+        <!-- Primary Navbar items -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="/index.html" class="py-4 px-2 text-indigo-500 border-b-4 border-indigo-500 font-semibold">Home</a>
+          <a href="/feed.html"
+            class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Feed</a>
+          <a href="/avtar.html"
+            class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">profile</a>
+          <a href="/settings.html"
+            class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Settings</a>
+        </div>
+        <!-- Secondary Navbar items -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/login.html"
+            class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300">Log
+            In</a>
+          <a href="/profile.html"
+            class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300">Sign
+            up</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <svg class="w-6 h-6 text-gray-500 hover:text-indigo-500" x-show="!showMenu" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
       </div>
-      <!-- mobile menu -->
+    </div>
+    <!-- mobile menu -->
 
-      <div class="hidden mobile-menu">
-        <ul class="flex flex-col">
-          <li class="active">
-            <a
-              href="index.html"
-              class="block text-white hover:bg-indigo-500 text-sm px-14 py-4 hover:text-white bg-indigo-500 font-semibold"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#services"
-              class="block font-semibold hover:bg-indigo-500 hover:text-white text-sm px-14 py-4 transition duration-300"
-              >Settings</a
-            >
-          </li>
-          <li>
-            <a
-              href="#about"
-              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300"
-              >Login</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300"
-              >Contact Us</a
-            >
-          </li>
-        </ul>
+    <div class="hidden mobile-menu">
+      <ul class="flex flex-col">
+        <li class="active">
+          <a href="index.html"
+            class="block text-white hover:bg-indigo-500 text-sm px-14 py-4 hover:text-white bg-indigo-500 font-semibold">Home</a>
+        </li>
+        <li>
+          <a href="#services"
+            class="block font-semibold hover:bg-indigo-500 hover:text-white text-sm px-14 py-4 transition duration-300">Settings</a>
+        </li>
+        <li>
+          <a href="#about"
+            class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300">Login</a>
+        </li>
+        <li>
+          <a href="#contact"
+            class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300">Contact
+            Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- hero section  -->
+
+  <section class="text-gray-500">
+    <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+      <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+        <h1 class="text-5xl font-bold leading-none sm:text-6xl">Automate Placement 
+          <br>with
+          <span class="text-violet-800">PlaceIt</span>
+        </h1>
+        <p class="mt-6 mb-8 text-lg sm:mb-12">Create and Automate your System with minimum pricing ever.
+          
+        </p>
+        <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+          <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded-full bg-violet-800 text-white">Get now</a>
+        </div>
       </div>
-    </nav>
+      <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+        <img src="./img/undraw_home_screen_re_640d.svg" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+      </div>
+    </div>
+  </section>
 
- 
 
-    <!-- foooter -->
 
-    <div
-      class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-2"
-    >
-      <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="sm:col-span-2">
-          <img src="./img/logo.png" alt="Logo" class="h-12" />
-          <div class="mt-6 lg:max-w-sm">
-            <p class="text-base text-gray-800">
-              We are here to solve your Datasheet problems..
-            </p>
-            <p class="mt-4 text-base text-gray-800">
-              Providing smooth Placement Data integration for the students and
-              colleges.
-            </p>
-          </div>
-        </div>
-        <div class="space-y-2 text-base">
-          <p class="text-xl font-bold tracking-wide text-gray-900">Contacts</p>
-          <div class="flex">
-            <a
-              href="mailto:placeit@gmail.com"
-              aria-label="Our email"
-              title="Our email"
-              class=" uppercase transition-colors duration-300 text-indigo-700"
-              >Email</a
-            >
-          </div>
-        </div>
-        <div>
-          <span class="text-xl font-bold tracking-wide text-gray-900"
-            >Social</span
-          >
-          <div class="flex items-center my-3 text-3xl  space-x-3">
-            <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/></a>
-            <a href=""><img src="https://img.icons8.com/color/30/000000/figma--v1.png"/></a>
-            <a href=""><img src="https://img.icons8.com/color/30/000000/twitter--v1.png"/></a>
-          </div>
-          <p class="mt-4 text-base text-indigo-700">
-            we are still building the stuff, so you can point out the outflows
-            to help us, Thank You.
+  <!-- foooter -->
+
+  <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-2">
+    <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="sm:col-span-2">
+        <img src="./img/logo.png" alt="Logo" class="h-12" />
+        <div class="mt-6 lg:max-w-sm">
+          <p class="text-base text-gray-800">
+            We are here to solve your Datasheet problems..
+          </p>
+          <p class="mt-4 text-base text-gray-800">
+            Providing smooth Placement Data integration for the students and
+            colleges.
           </p>
         </div>
       </div>
-      <div
-        class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row"
-      >
-        <p class="text-sm text-gray-600">
-          © Copyright 2022 PlaceIt.co All rights reserved.
+      <div class="space-y-2 text-base">
+        <p class="text-xl font-bold tracking-wide text-gray-900">Contacts</p>
+        <div class="flex">
+          <a href="mailto:placeit@gmail.com" aria-label="Our email" title="Our email"
+            class=" uppercase transition-colors duration-300 text-indigo-700">Email</a>
+        </div>
+      </div>
+      <div>
+        <span class="text-xl font-bold tracking-wide text-gray-900">Social</span>
+        <div class="flex items-center my-3 text-3xl  space-x-3">
+          <a href=""><img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" /></a>
+          <a href=""><img src="https://img.icons8.com/color/30/000000/figma--v1.png" /></a>
+          <a href=""><img src="https://img.icons8.com/color/30/000000/twitter--v1.png" /></a>
+        </div>
+        <p class="mt-4 text-base text-indigo-700">
+          we are still building the stuff, so you can point out the outflows
+          to help us, Thank You.
         </p>
-        <ul
-          class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row"
-        >
-          <li>
-            <a
-              href="/"
-              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-              >F.A.Q</a
-            >
-          </li>
-          <li>
-            <a
-              href="/"
-              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-              >Privacy Policy</a
-            >
-          </li>
-          <li>
-            <a
-              href="/"
-              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-              >Terms &amp; Conditions</a
-            >
-          </li>
-        </ul>
       </div>
     </div>
+    <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+      <p class="text-sm text-gray-600">
+        © Copyright 2022 PlaceIt.co All rights reserved.
+      </p>
+      <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+        <li>
+          <a href="/"
+            class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
+        </li>
+        <li>
+          <a href="/"
+            class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy
+            Policy</a>
+        </li>
+        <li>
+          <a href="/"
+            class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp;
+            Conditions</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-    <script>
-      const btn = document.querySelector("button.mobile-menu-button");
-      const menu = document.querySelector(".mobile-menu");
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
 
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    </script>
-  </body>
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
 </html>

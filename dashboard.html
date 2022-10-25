@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <!-- Primary Navbar items -->
-                <div class="hidden md:flex items-center space-x-4">
+                <div class="hidden lg:flex items-center space-x-4">
                     <a href="/index.html"
                         class="py-4 px-2 text-indigo-500 border-b-4 border-indigo-500 font-semibold">Home</a>
                     <a href="/feed.html"
@@ -37,7 +37,7 @@
                         class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Settings</a>
                 </div>
                 <!-- Secondary Navbar items -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-8">
                     <a href="/login.html"
                         class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300">Log
                         In</a>
@@ -46,7 +46,7 @@
                         up</a>
                 </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
+                <div class="lg:hidden flex items-center">
                     <button class="outline-none mobile-menu-button">
                         <svg class="w-6 h-6 text-gray-500 hover:text-indigo-500" x-show="!showMenu" fill="none"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
@@ -83,7 +83,7 @@
     </nav>
 
     <!-- hero section  -->
-    <aside class=" bg-white shadow-md max-h-screen w-64">
+    <!-- <aside class=" bg-white shadow-md max-h-screen w-64">
         <div class="flex flex-col justify-between h-full overflow-y-auto py-4 px-3 rounded">
             <div class="flex-grow">
                 <div class="p-4">
@@ -127,7 +127,59 @@
                 </div>
             </div>
         </div>
-    </aside>
+
+    </aside> -->
+    <div class=" justify-center items-center mx-10 ">
+        <div class="grid grid-rows-4 grid-cols-4  gap-10 ">
+            <div class="hidden lg:block row-span-3 bg-red-200 h-screen">
+                <div class="flex flex-col justify-between   py-4 px-3 rounded bg-blue-200">
+                    <div class="flex-grow">
+                        <div class="p-4">
+                            <ul class="space-y-0">
+                                <li>
+                                    <a href=""
+                                        class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5">
+                                        <i class='bx bxs-graduation mr-4 text-3xl'></i>
+                                        <p class="text-xl">college</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5">
+                                        <i class='bx bx-group  mr-4 text-3xl'></i>
+                                        <p class="text-xl">Department</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5">
+                                        <i class='bx bx-user-plus mr-4 text-3xl'></i>
+                                        <p class="text-xl">Students</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5">
+                                        <i class='bx bx-message-square-add mr-4 text-3xl'></i>
+                                        <p class="text-xl">Post</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""
+                                        class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5">
+                                        <i class='bx bx-carousel mr-4 text-3xl'></i>
+                                        <p class="text-xl">Company</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-3  bg-blue-300 border-4 border-blue-800">02</div>
+            <div class="row-span-2 col-span-3 bg-violet-800 ">03</div>
+          </div>
+    </div>
 
 
 
@@ -135,7 +187,7 @@
 
     <!-- foooter -->
 
-    <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-2">
+    <!-- <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-2">
         <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
             <div class="sm:col-span-2">
                 <img src="./img/logo.png" alt="Logo" class="h-12" />
@@ -191,7 +243,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <script>
         const btn = document.querySelector("button.mobile-menu-button");
         const menu = document.querySelector(".mobile-menu");

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PlaceIt</title>
+    <link rel="stylesheet" href="input.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between space-x-12">
+          <div class="flex">
+            <div>
+              <!-- Website Logo -->
+              <a href="/index.html" class="flex items-center py-4 px-2">
+                <img src="./img/logo.png" alt="Logo" class="h-8" />
+              </a>
+            </div>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="/index.html"
+              class="py-4 px-2 text-indigo-500 border-b-4 border-indigo-500 font-semibold"
+              >Home</a
+            >
+            <a
+              href="/feed.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+              >Feed</a
+            >
+            <a
+              href="/avtar.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+              >profile</a
+            >
+            <a
+              href="/settings.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300"
+              >Settings</a
+            >
+          </div>
+          <!-- Secondary Navbar items -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a
+              href="/login.html"
+              class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
+              >Log In</a
+            >
+            <a
+              href="/profile.html"
+              class="py-2 px-8 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300"
+              >Sign up</a
+            >
+          </div>
+          <!-- Mobile menu button -->
+          <div class="lg:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-6 h-6 text-gray-500 hover:text-indigo-500"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+
+      <div class="hidden mobile-menu">
+        <ul class="flex flex-col">
+          <li class="active">
+            <a
+              href="index.html"
+              class="block text-white hover:bg-indigo-500 text-sm px-14 py-4 hover:text-white bg-indigo-500 font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="block font-semibold hover:bg-indigo-500 hover:text-white text-sm px-14 py-4 transition duration-300"
+              >Settings</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hero  -->
+    <div class="justify-center items-center m-4 lg:m-10">
+      <div class="grid grid-rows-4 grid-cols-4 gap-6 gap-y-4">
+        <div class="hidden lg:block row-span-3 h-screen">
+          <div
+            class="border-2 border-grey-100 flex flex-col justify-between py-4 px-3 rounded"
+          >
+            <div class="flex-grow">
+              <div class="p-4">
+                <ul class="space-y-0">
+                  <li>
+                    <a
+                      href=""
+                      class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                    >
+                      <i class="bx bxs-graduation mr-4 text-3xl"></i>
+                      <p class="text-xl">college</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                    >
+                      <i class="bx bx-group mr-4 text-3xl"></i>
+                      <p class="text-xl">Department</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                    >
+                      <i class="bx bx-user-plus mr-4 text-3xl"></i>
+                      <p class="text-xl">Students</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                    >
+                      <i class="bx bx-message-square-add mr-4 text-3xl"></i>
+                      <p class="text-xl">Post</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                    >
+                      <i class="bx bx-carousel mr-4 text-3xl"></i>
+                      <p class="text-xl">Company</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row-span-1 lg:col-span-3 col-span-5">
+          <div class="flex justify-center">
+            <div
+              class="px-5 max-w-fit border-b-4 lg:text-4xl text-2xl border-indigo-700 font-bold"
+            >
+              Student DashBoard
+            </div>
+          </div>
+          <div class="my-8 ">
+            <form class="max-w-md">
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only"
+                >Search</label
+              >
+              <div class="relative">
+                <div
+                  class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                  placeholder="Search the students "
+                  required=""
+                />
+                <button
+                  type="submit"
+                  class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 "
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="row-span-3 lg:col-span-3 col-span-5 rounded-2xl border-4 border-blue-800  lg:-mt-20 lg:h-screen"
+        >
+          <div class="flex justify-center">
+            <div class="px-5 m-10 text-2xl border-indigo-700 font-bold">
+              MUI componets Box
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  </body>
+</html>

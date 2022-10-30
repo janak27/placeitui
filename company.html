@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PlaceIt</title>
+    <link rel="stylesheet" href="input.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white shadow-lg">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between space-x-12">
+          <div class="flex">
+            <div>
+              <!-- Website Logo -->
+              <a href="#" class="flex items-center p-2">
+                <img src="./img/logo.png" alt="Logo" class="h-8" />
+              </a>
+            </div>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="/index.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Home</a>
+            <a href="/feed.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Feed</a>
+            <a href="/profile.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">profile</a>
+            <a href="/settings.html"
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Settings</a>
+          </div>
+          <!-- Secondary Navbar items -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#"
+              class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300">Log
+              In</a>
+            <a href="#"
+              class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300">Sign
+              up</a>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg class="w-6 h-6 text-gray-500 hover:text-indigo-500" x-show="!showMenu" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- mobile menu -->
+  
+      <div class="hidden mobile-menu">
+        <ul class="flex flex-col">
+          <li class="active">
+            <a href="index.html"
+              class="block text-white hover:bg-indigo-500 text-sm px-14 py-4 hover:text-white bg-indigo-500 font-semibold">Home</a>
+          </li>
+          <li>
+            <a href="#services"
+              class="block font-semibold hover:bg-indigo-500 hover:text-white text-sm px-14 py-4 transition duration-300">Settings</a>
+          </li>
+          <li>
+            <a href="#about"
+              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300">Login</a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300">Contact
+              Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hero  -->
+    <div class="m-4 lg:m-10 border-2 rounded border-indigo-500 h-screen">
+      <!-- buttons  -->
+      <div class="flex m-4  justify-between">
+      <div class="flex  flex-row bg-indigo-600 rounded-full px-4 py-2 cursor-pointer">
+        <a href="#" class="px-2"><i class='bx bx-arrow-back text-white text-3xl'></i></a>
+        <p class="text-2xl text-white px-2 font-bold">Back</p>
+      </div>
+      <div class="hidden md:flex flex-row  bg-indigo-600 rounded-full px-4 py-2 cursor-pointer">
+        <a href="#" class="px-2"><i class='bx bx-plus-circle text-white text-3xl'></i></a>
+        <p class="text-2xl text-white px-2 font-bold">Create</p>
+      </div>
+      </div>
+
+      <!-- maincard  -->
+    </div>
+
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  </body>
+</html>

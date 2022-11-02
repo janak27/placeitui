@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PlaceIt</title>
+    <link rel="stylesheet" href="input.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+</head>
+
+<body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between space-x-12">
+                <div class="flex">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center p-2">
+                            <img src="./img/logo.png" alt="Logo" class="h-8" />
+                        </a>
+                    </div>
+                </div>
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="/index.html"
+                        class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Home</a>
+                    <a href="/feed.html"
+                        class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Feed</a>
+                    <a href="/profile.html"
+                        class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">profile</a>
+                    <a href="/settings.html"
+                        class="py-4 px-2 text-gray-500 font-semibold hover:text-indigo-500 transition duration-300">Settings</a>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#"
+                        class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300">Log
+                        In</a>
+                    <a href="#"
+                        class="py-2 px-4 font-medium text-gray-500 rounded-3xl border-2 border-slate-400 hover:bg-indigo-500 hover:text-white transition duration-300">Sign
+                        up</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-indigo-500" x-show="!showMenu" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+
+        <div class="hidden mobile-menu">
+            <ul class="flex flex-col">
+                <li class="active">
+                    <a href="index.html"
+                        class="block text-white hover:bg-indigo-500 text-sm px-14 py-4 hover:text-white bg-indigo-500 font-semibold">Home</a>
+                </li>
+                <li>
+                    <a href="#services"
+                        class="block font-semibold hover:bg-indigo-500 hover:text-white text-sm px-14 py-4 transition duration-300">Settings</a>
+                </li>
+                <li>
+                    <a href="#about"
+                        class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300">Login</a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="block text-sm px-14 py-4 font-semibold hover:text-white hover:bg-indigo-500 transition duration-300">Contact
+                        Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- hero  -->
+    <div class="m-4 lg:m-10 ">
+        <!-- buttons  -->
+        <div class="flex m-4  text-md justify-between">
+            <div class="flex  flex-row  rounded-full py-2 cursor-pointer">
+                <a href="#" class=""><i class='bx bxs-chevron-left  lg:text-3xl'></i></a>
+                <p class="lg:text-2xl px-2 border-b-4 border-indigo-800">Back</p>
+            </div>
+            <div class="hidden md:flex flex-row  bg-indigo-600 rounded-full px-4 py-2 cursor-pointer">
+                <a href="#" class="px-2"><i class='bx bx-plus-circle text-white text-3xl'></i></a>
+                <p class="text-2xl text-white px-2 font-bold">Create</p>
+            </div>
+        </div>
+        <div
+            class=" border-2 border-indigo-800 relative space-y-3 md:space-y-0  rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto bg-gray-200">
+            <!-- md:space-x-5 space-y-3 md:space-y-0 -->
+            <!-- 1st container  -->
+            <div class=" flex flex-col md:flex-row">
+                <div class=" w-full md:w-1/3  rounded p-4 grid place-items-center ">
+                    <img src="./img/Jio-Logo 6.png" alt="tailwind logo" class="rounded-xl" />
+                </div>
+                <div class=" w-full md:w-2/3  flex flex-col  space-y-2 p-3 ">
+                    <h3 class=" font-semibold text-gray-800 md:text-5xl text-xl">JIO</h3>
+                    <a href="" class="flex flex-row font-medium text-blue-800 cursor-pointer">
+                        <i class='bx bx-link text-4xl'></i>
+                        <p class="md:text-xl text-2xl">
+                            www.jio.com/careeres
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/3 px-2 py-2">
+                    <div class="p-4 flex flex-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1)">
+                            <path
+                                d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z">
+                            </path>
+                            <path
+                                d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z">
+                            </path>
+                        </svg>
+                        <p class="font-semibold text-gray-800 mx-2 text-base">Mrs. Amu Dange</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded w-full md:w-2/3  flex flex-col md:-mt-10  p-3 ">
+                    <div class="flex justify-items-start mb-2">
+                        <div class="px-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgba(0, 0, 0, 1)">
+                                <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z">
+                                </path>
+                                <path
+                                    d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="px-4">
+                            <h4>31/03/2002</h4>
+                        </div>
+                    </div>
+                    <div class=" flex justify-items-start mb-2">
+                        <div class="px-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgba(0, 0, 0, 1)">
+                                <path
+                                    d="M12 15c-1.84 0-2-.86-2-1H8c0 .92.66 2.55 3 2.92V18h2v-1.08c2-.34 3-1.63 3-2.92 0-1.12-.52-3-4-3-2 0-2-.63-2-1s.7-1 2-1 1.39.64 1.4 1h2A3 3 0 0 0 13 7.12V6h-2v1.09C9 7.42 8 8.71 8 10c0 1.12.52 3 4 3 2 0 2 .68 2 1s-.62 1-2 1z">
+                                </path>
+                                <path d="M5 2H2v2h2v17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4h2V2H5zm13 18H6V4h12z"></path>
+                            </svg>
+                        </div>
+                        <div class="px-4">
+                            <h4>8 LPA</h4>
+                        </div>
+                    </div>
+                    <div class=" flex justify-items-start mb-2">
+                        <div class="px-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M8.267 14.68c-.184 0-.308.018-.372.036v1.178c.076.018.171.023.302.023.479 0 .774-.242.774-.651 0-.366-.254-.586-.704-.586zm3.487.012c-.2 0-.33.018-.407.036v2.61c.077.018.201.018.313.018.817.006 1.349-.444 1.349-1.396.006-.83-.479-1.268-1.255-1.268z"></path><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM9.498 16.19c-.309.29-.765.42-1.296.42a2.23 2.23 0 0 1-.308-.018v1.426H7v-3.936A7.558 7.558 0 0 1 8.219 14c.557 0 .953.106 1.22.319.254.202.426.533.426.923-.001.392-.131.723-.367.948zm3.807 1.355c-.42.349-1.059.515-1.84.515-.468 0-.799-.03-1.024-.06v-3.917A7.947 7.947 0 0 1 11.66 14c.757 0 1.249.136 1.633.426.415.308.675.799.675 1.504 0 .763-.279 1.29-.663 1.615zM17 14.77h-1.532v.911H16.9v.734h-1.432v1.604h-.906V14.03H17v.74zM14 9h-1V4l5 5h-4z"></path></svg>
+                        </div>
+                        <div class="px-4">
+                            <a href="">Jobdescription.pdf</a>
+                        </div>
+                    </div>
+
+                    <div class="mx-6 flex justify-items-start mb-2">
+                        <p class="text-gray-600 font-semibold">
+                            we are looking for candidate who have knowledge of everything..so we are giving him only 3 lakh per annum by showing 5 lakh package...
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- 2nd container -->
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Post</title>
+  <link rel="stylesheet" href="input.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+</head>
+
+<body>
+
+  <!-- start from here -->
+
+  <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 max-w-6xl mx-auto">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="https://flowbite.com/" class="flex items-center">
+        <img src="./img/logo.png" class="h-9 mr-3 " alt="Flowbite Logo" />
+      </a>
+      <div class="flex md:order-2">
+        <button type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">Get
+          started</button>
+        <button data-collapse-toggle="navbar-cta" type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-cta" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm  md:border-0 md:bg-white font-medium">
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 "
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">About</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">Services</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- dont touch above part -->
+
+  <div class="justify-center items-center m-4 lg:m-10">
+    <div class="grid grid-rows-4 grid-cols-4 gap-6 gap-y-4">
+      <div class="hidden border-2 border-grey-500 rounded-2xl lg:block row-span-3">
+        <div
+          class=" flex flex-col justify-between py-4 px-3 rounded"
+        >
+          <div class="flex-grow">
+            <div class="p-4">
+              <ul class="space-y-0">
+                <li>
+                  <a
+                    href=""
+                    class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                  >
+                    <i class="bx bxs-graduation mr-4 text-3xl"></i>
+                    <p class="text-xl">college</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                  >
+                    <i class="bx bx-group mr-4 text-3xl"></i>
+                    <p class="text-xl">Department</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                  >
+                    <i class="bx bx-user-plus mr-4 text-3xl"></i>
+                    <p class="text-xl">Students</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                  >
+                    <i class="bx bx-message-square-add mr-4 text-3xl"></i>
+                    <p class="text-xl">Post</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="flex items-center hover:bg-indigo-600 hover:text-white rounded-xl font-bold text-sm text-indigo-600 py-2 px-5"
+                  >
+                    <i class="bx bx-carousel mr-4 text-3xl"></i>
+                    <p class="text-xl">Company</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-span-1 lg:col-span-3 col-span-5">
+        <div class="flex justify-between ">
+          <div
+            class="px-5 max-w-fit lg:text-4xl text-2xl  font-bold"
+          >
+            Student Dashboard
+          </div>
+          <div
+            class="px-5 max-w-fit  lg:text-xl text-2xl  font-bold"
+          >
+          <button className="btn">«</button>
+          <button className="btn">2022</button>
+          <button className="btn">»</button>
+          </div>
+        </div>
+        <div class="my-8 min-w-6xl">
+          <form class="">
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only"
+              >Search</label
+            >
+            <div class="relative">
+              <div
+                class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                placeholder="Search the students "
+                required=""
+              />
+              <button
+                type="submit"
+                class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 "
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="row-span-3 lg:col-span-3 col-span-5 rounded-2xl border-4 border-blue-800  lg:-mt-20 lg:h-screen"
+      >
+        <div class="flex justify-center">
+          <div class="px-5 m-10 text-2xl border-indigo-700 font-bold">
+            MUI componets Box
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- dont touch this -->
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+
+</html>

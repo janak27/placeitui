@@ -141,58 +141,32 @@
                     </div>
 
                 </div>
-                <div class="flex justify-end mx-4 -mb-4">
-                    <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom"
-                        data-dropdown-placement="bottom"
-                        class="mr-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                        type="button">Year <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg></button>
-
-                    <!-- Dropdown menu -->
-                    <div id="dropdownBottom"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24">
-                        <ul class="py-2 text-sm text-gray-700 "
-                            aria-labelledby="dropdownBottomButton">
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2023</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2022</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2021</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2020</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2019</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2018</a>
-                            </li>
-                           
-                        </ul>
+                <div class="flex flex-col md:flex-row justify-between mx-4 -mb-4">
+                    <div class="relative inline-flex ">
+                        <select
+                            class="text-xs md:text-sm font-bold rounded border-2 border-purple-700 text-gray-600 h-10 w-full pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                            <option>Department of Information technology</option>
+                            <option>Department of Computer Science</option>
+                            <option>Department of Chemical Engineering</option>
+                            <option>Department of Mechanical Engineering</option>
+                            <option>Department of Instrumation Engineering</option>
+                        </select>
                     </div>
-
+                    <div class="relative inline-flex my-2 ">
+                        <select
+                            class="text-sm font-bold rounded border-2 border-purple-700 text-gray-600 h-10 w-24 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                            <option>2017</option>
+                            <option>2016</option>
+                        </select>
+                    </div>
                 </div>
-
             </div>
-
-
-
-
-
             <div class=" -mt-28 sm:-mt-10 row-span-3 lg:col-span-3 col-span-5  ">
                 <div class="flex flex-row flex-wrap">
                     <div

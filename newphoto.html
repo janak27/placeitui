@@ -75,22 +75,23 @@
                     class="mx-auto object-contain border-2 border-indigo-600  w-60 md:w-80 h-60 md:h-80 rounded-full"/>
             </div>
             <div class="flex flex-col justify-center m-10 flex md:w-1/2">
-                <ul class=" border-2 border-blue-600 rounded-2xl">
+                <ul class=" border-2 border-blue-600 rounded-lg">
                     <div class="flex justify-center my-4 w-full flex text-black font-semibold  ">
                         <p class=" md:text-3xl text-xl ">Change Profile picture</p>
                     </div>
-                    <div class="justify-center border-b-2 border-blue-600 my-4 w-full flex"></div>
-                    <li class="flex justify-center space-x-4 mx-4 my-2">
-                        <a href="#"><p class="text-md text-blue-600 font-semibold md:text-2xl">Upload Photo</p></a>
-                    </li>
-                    
-                    <li class="flex justify-center space-x-4 mx-4 my-2">
-                        <a href="#"><p class="text-md text-red-600 font-semibold md:text-2xl"> Remove Photo</p></a>
-                    </li>
-                    
-                    <li class="flex justify-center space-x-4 mx-4 my-2">
-                        <a href="#"><p class="text-md md:text-2xl">cancel</p></a>
-                    </li>
+                    <li class="mx-2">
+                    <label for="dropzone-file" class="flex flex-col items-center justify-center  border-2 border-gray-300 border-dashed rounded-lg cursor-pointer  hover:bg-gray-100 ">
+                        <div class="flex flex-col items-center justify-center w-full md:h-36 pt-4 pb-4">
+                            <svg aria-hidden="true" class=" w-8 md:w-10 h-8 md:h-10 mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                            <p class="mb-2 text-sm text-gray-500 "><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                            <p class="text-xs text-gray-500 ">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                        </div>
+                        <input id="dropzone-file" type="file" class="hidden" />
+                    </label>
+                </li>
+                <li class="flex justify-center mx-auto my-2">
+                    <button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Cancel</button>
+                </li> 
                 </ul>
             </div>
         </div>

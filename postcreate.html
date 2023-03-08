@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PlaceIt</title>
+    <link rel="stylesheet" href="input.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+</head>
+
+<body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 max-w-6xl mx-auto">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="./img/logo.png" class="h-9 mr-3 " alt="Flowbite Logo" />
+            </a>
+            <div class="flex md:order-2">
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">Get
+                    started</button>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm  md:border-0 md:bg-white font-medium">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 "
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero  -->
+    <div class="max-w-6xl mx-auto">
+        <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
+            <h1 class="text-2xl font-bold mb-8">Form With Floating Labels</h1>
+            <form id="form" novalidate>
+                <div class="relative z-0 w-full mb-5">
+                    <input type="text" name="name" placeholder=" " required
+                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                    <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter name</label>
+                    <span class="text-sm text-red-600 hidden" id="error">Name is required</span>
+                </div>
+
+                <div class="relative z-0 w-full mb-5">
+                    <input type="email" name="email" placeholder=" "
+                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                    <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter email
+                        address</label>
+                    <span class="text-sm text-red-600 hidden" id="error">Email address is required</span>
+                </div>
+
+                <div class="relative z-0 w-full mb-5">
+                    <input type="password" name="password" placeholder=" "
+                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                    <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter
+                        password</label>
+                    <span class="text-sm text-red-600 hidden" id="error">Password is required</span>
+                </div>
+
+                <fieldset class="relative z-0 w-full p-px mb-5">
+                    <legend class="absolute text-gray-500 transform scale-75 -top-3 origin-0">Choose an option</legend>
+                    <div class="block pt-3 pb-2 space-x-4">
+                        <label>
+                            <input type="radio" name="radio" value="1"
+                                class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black" />
+                            Option 1
+                        </label>
+                        <label>
+                            <input type="radio" name="radio" value="2"
+                                class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black" />
+                            Option 2
+                        </label>
+                    </div>
+                    <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
+                </fieldset>
+
+                <div class="relative z-0 w-full mb-5">
+                    <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                        class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                        <option value="" selected disabled hidden></option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                    <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                        option</label>
+                    <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
+                </div>
+
+                <div class="flex flex-row space-x-4">
+                    <div class="relative z-0 w-full mb-5">
+                        <input type="text" name="date" placeholder=" " onclick="this.setAttribute('type', 'date');"
+                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <label for="date" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Date</label>
+                        <span class="text-sm text-red-600 hidden" id="error">Date is required</span>
+                    </div>
+                    <div class="relative z-0 w-full">
+                        <input type="text" name="time" placeholder=" " onclick="this.setAttribute('type', 'time');"
+                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <label for="time" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Time</label>
+                        <span class="text-sm text-red-600 hidden" id="error">Time is required</span>
+                    </div>
+                </div>
+
+                <div class="relative z-0 w-full mb-5">
+                    <input type="number" name="money" placeholder=" "
+                        class="pt-3 pb-2 pl-5 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                    <div class="absolute top-0 left-0 mt-3 ml-1 text-gray-400">$</div>
+                    <label for="money"
+                        class="absolute duration-300 top-3 left-5 -z-1 origin-0 text-gray-500">Amount</label>
+                    <span class="text-sm text-red-600 hidden" id="error">Amount is required</span>
+                </div>
+
+                <div class="relative z-0 w-full mb-5">
+                    <input type="text" name="duration" placeholder=" "
+                        class="pt-3 pb-2 pr-12 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                    <div class="absolute top-0 right-0 mt-3 mr-4 text-gray-400">min</div>
+                    <label for="duration"
+                        class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Duration</label>
+                    <span class="text-sm text-red-600 hidden" id="error">Duration is required</span>
+                </div>
+
+                <button id="button" type="button"
+                    class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-pink-500 hover:bg-pink-600 hover:shadow-lg focus:outline-none">
+                    Toggle Error
+                </button>
+            </form>
+        </div>
+
+        <script>
+            'use strict'
+
+            document.getElementById('button').addEventListener('click', toggleError)
+            const errMessages = document.querySelectorAll('#error')
+
+            function toggleError() {
+                // Show error message
+                errMessages.forEach((el) => {
+                    el.classList.toggle('hidden')
+                })
+
+                // Highlight input and label with red
+                const allBorders = document.querySelectorAll('.border-gray-200')
+                const allTexts = document.querySelectorAll('.text-gray-500')
+                allBorders.forEach((el) => {
+                    el.classList.toggle('border-red-600')
+                })
+                allTexts.forEach((el) => {
+                    el.classList.toggle('text-red-600')
+                })
+            }
+        </script>
+    </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+
+</html>

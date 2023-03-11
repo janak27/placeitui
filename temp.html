@@ -81,6 +81,77 @@
     </div>
   </nav>
 
+<!-- component -->
+
+<div class="flex flex-col space-y-4" id="container">
+  <div class="p-4 bg-gray-100 rounded-md">
+    <p class="text-gray-900">Element 1</p>
+  </div>
+</div>
+
+<div class="flex space-x-4">
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="copy-btn">
+    Copy Element
+  </button>
+  
+  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" id="delete-btn">
+    Delete Last Element
+  </button>
+</div>
+
+
+<script>
+  const copyBtn = document.getElementById('copy-btn');
+  const deleteBtn = document.getElementById('delete-btn');
+  const container = document.getElementById('container');
+
+  copyBtn.addEventListener('click', () => {
+    const elementToCopy = container.querySelector('.bg-gray-100:last-child');
+    const clonedElement = elementToCopy.cloneNode(true);
+    container.appendChild(clonedElement);
+  });
+
+  deleteBtn.addEventListener('click', () => {
+    const lastElement = container.lastChild;
+    if (lastElement) {
+      container.removeChild(lastElement);
+    }
+  });
+</script>
+
+
+
+<button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" type="button">Dropdown search <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+
+<!-- Dropdown menu -->
+<div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow w-60 ">
+    <ul class="h-fit px-3 pb-3 overflow-y-auto text-sm text-gray-700" aria-labelledby="dropdownSearchButton">
+      <li>
+        <div class="flex items-center pl-2 rounded hover:bg-gray-100 ">
+          <input id="checkbox-item-11" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ">
+          <label for="checkbox-item-11" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Bonnie Green</label>
+        </div>
+      </li>
+      <li>
+        <div class="flex items-center pl-2 rounded hover:bg-gray-100 ">
+            <input checked id="checkbox-item-12" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ">
+            <label for="checkbox-item-12" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded ">Jese Leos</label>
+          </div>
+      </li>
+      <li>
+        <div class="flex items-center pl-2 rounded hover:bg-gray-100 ">
+          <input id="checkbox-item-13" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ">
+          <label for="checkbox-item-13" class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded ">Michael Gough</label>
+        </div>
+      </li>
+    </ul>
+</div>
+
+
+
+
+
+
 
 
   <!-- foooter -->

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PlaceIt</title>
+    <link rel="stylesheet" href="input.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+</head>
+
+<body>
+    <!-- Navbar goes here -->
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 max-w-6xl mx-auto">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="./img/logo.png" class="h-9 mr-3 " alt="Flowbite Logo" />
+            </a>
+            <div class="flex md:order-2">
+                <button type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">Get
+                    started</button>
+                <button data-collapse-toggle="navbar-cta" type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                    aria-controls="navbar-cta" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm  md:border-0 md:bg-white font-medium">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 "
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:text-white  rounded hover:bg-blue-700 md:hover:bg-transparent md:p-0 md:hover:text-blue-700 ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero  -->
+
+    <div class="m-4 lg:m-10 ">
+        <!-- buttons  -->
+        <div class="flex m-4 text-md justify-between">
+            <div class="flex  flex-row  rounded-full py-2 cursor-pointer">
+                <a href="#" class=""><i class='bx bxs-chevron-left  lg:text-3xl'></i></a>
+                <p class="lg:text-2xl px-2 border-b-4 border-indigo-800">Back</p>
+            </div>
+        </div>
+
+        <div class="border-2 border-gray-300 m-4 rounded p-4">
+            <div class="px-5 my-8 md:mx-10 mx-auto max-w-fit border-b-4 text-3xl border-indigo-700 font-bold">
+                Select visits
+            </div>
+            <!-- component -->
+            <div class="flex justify-center items-center flex-col ">
+                <select
+                    class="text-xl font-bold rounded border-2 border-purple-700 text-gray-600 h-14 w-full md:w-1/2 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                    <option value="" disabled selected hidden>Visiting Records</option>
+                    <option> visiting record 1</option>
+                    <option> visiting record 2</option>
+                    <option> visiting record 3</option>
+                    <option> visiting record 4</option>
+                    <option> visiting record 5</option>
+                </select>
+            </div>
+        </div>
+        <div class="border-2 border-gray-300 m-4 rounded p-4">
+            <div class="px-5 my-8 md:mx-10 mx-auto max-w-fit border-b-4 text-3xl border-indigo-700 font-bold">
+                Conditions <i class='bx bxs-caret-down-circle'></i>
+            </div>
+            <!-- component -->
+            <div class="flex justify-center items-center flex-col ">
+                <div class="text-xl font-bold w-full md:w-1/2 bg-white">
+                    Condition (10th marks)
+                </div>
+                <div class="w-full mb-4 md:w-1/2">
+                    <label for="" class="block text-sm font-medium text-gray-900 dark:text-white">SSC marks</label>
+                    <input type="text" id="first_name"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full "
+                        placeholder="Enter the minimum marks without %" required>
+                </div>
+                <div class="text-xl font-bold w-full md:w-1/2 bg-white">
+                    Condition (12th marks)
+                </div>
+                <div class="w-full mb-4 md:w-1/2">
+                    <label for="" class="block text-sm font-medium text-gray-900 dark:text-white">HSC marks</label>
+                    <input type="text" id=""
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full "
+                        placeholder="Enter the minimum marks without %" required>
+                </div>
+                <div class="text-xl mb-4 font-bold w-full md:w-1/2 bg-white">
+                    Condition (About KTs)
+                </div>
+                <div class="w-full mb-4 md:w-1/2">
+                    <input id="default-checkbox" type="checkbox" value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 ">
+                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 ">No Live KTs</label>
+                </div>
+                <div class="w-full mb-4 md:w-1/2">
+                    <input id="default-checkbox" type="checkbox" value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
+                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 ">No Dead KTs</label>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div class="border-2 border-gray-300 m-4 bg-white rounded p-4">
+                <div class="flex flex-row space-x-4 justify-between">
+                    <div class="md:w-full rounded p-2">
+                        <div class="md:px-5 md:my-4 md:mx-10 mx-auto">
+                            <p
+                                class="md:text-3xl text-xl border-indigo-700 font-bold border-b-4 border-indigo-700 md:w-48">
+                                Additional</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center flex-col ">
+                    <div class="py-4 text-xl font-bold w-full md:w-1/2 bg-white">
+                        Specify your Requirement
+                    </div>
+                    <select
+                        class="text-sm font-bold rounded-lg border-2 border-purple-700 text-gray-600 w-full md:w-1/2 
+                        px-4 py-2 bg-white hover:border-gray-400 focus:outline-none appearance-none
+                        ">
+                        <option value="" disabled selected hidden>Source of Data</option>
+                        <option> User Extracted </option>
+                        <option> User Entered </option>
+                    </select>
+                    <div class="py-4 text-xl font-bold w-full md:w-1/2 bg-white">
+                        Enter your Question
+                    </div>
+                    <div class="w-full -mt-4 md:w-1/2">
+                        <label for="" class="block text-sm font-medium text-gray-900 dark:text-white">HSC marks</label>
+                        <input type="text" id=""
+                            class=" border-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:border-blue-500 block w-full "
+                            placeholder="Your Question will be Displayed" required>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center flex-col ">
+                    <div class="py-4 text-xl font-bold w-full md:w-1/2 bg-white">
+                        Choose your Fields
+                    </div>
+                    <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch"
+                        data-dropdown-placement="bottom"
+                        class=" flex flex-row justify-between text-gray-600 border-2 border-purple-700 w-full md:w-1/2 font-medium rounded-lg hover:border-gray-400 text-sm px-4 py-2 text-center inline-flex items-center"
+                        type="button">
+                        <p> Fields for Data </p>
+                        <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown menu -->
+                    <div id="dropdownSearch" class="z-10 hidden bg-white rounded-lg shadow w-60 ">
+                        <ul class="h-fit px-3 pb-3 overflow-y-auto text-sm text-gray-700"
+                            aria-labelledby="dropdownSearchButton">
+                            <li>
+                                <div class="flex items-center pl-2 rounded hover:bg-gray-100 ">
+                                    <input id="checkbox-item-11" type="checkbox" value=""
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ">
+                                    <label for="checkbox-item-11"
+                                        class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded">Name</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center pl-2 rounded hover:bg-gray-100">
+                                    <input id="checkbox-item-12" type="checkbox" value=""
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ">
+                                    <label for="checkbox-item-12"
+                                        class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded ">MailID</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center pl-2 rounded hover:bg-gray-100 ">
+                                    <input id="checkbox-item-13" type="checkbox" value=""
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ">
+                                    <label for="checkbox-item-13"
+                                        class="w-full py-2 ml-2 text-sm font-medium text-gray-900 rounded ">Resume</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="px-4 py-4 flex justify-center space-x-4 font-bold">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg" id="copy-btn">
+                Add
+            </button>
+
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg" id="delete-btn">
+                Delete
+            </button>
+        </div>
+
+
+        <div class="px-5 py-8 flex justify-center  font-bold">
+            <a href="#" class="px-8 py-2 border-2 border-indigo-700 bg-indigo-700 text-white rounded-full font-bold">
+                Submit
+            </a>
+        </div>
+
+        <script>
+            const copyBtn = document.getElementById('copy-btn');
+            const deleteBtn = document.getElementById('delete-btn');
+            const container = document.getElementById('container');
+
+            copyBtn.addEventListener('click', () => {
+                const elementToCopy = container.querySelector('.bg-white:last-child');
+                const clonedElement = elementToCopy.cloneNode(true);
+                container.appendChild(clonedElement);
+            });
+
+            deleteBtn.addEventListener('click', () => {
+                const lastElement = container.lastChild;
+                if (lastElement) {
+                    container.removeChild(lastElement);
+                }
+            });
+        </script>
+
+
+
+    </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+
+</html>

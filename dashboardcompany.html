@@ -169,12 +169,46 @@
               <p class="px-2 font-bold">Create</p>
             </div>
           </div>
+
+          <div class="flex flex-row my-4 ">
+            <div class="flex w-full items-center px-4 py-2">
+              <input id="search-bar" class="bg-transparent w-full " type="text" placeholder="Search...">
+              <button id="clear-button" class="absolute right-12 mr-4  hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
+              </button>
+              <button class="ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"></path></svg>
+              </button>
+            </div>
+            
+            <script>
+              const searchBar = document.getElementById('search-bar');
+              const clearButton = document.getElementById('clear-button');
+            
+              // Show the clear button when the user types something in the search bar
+              searchBar.addEventListener('input', function() {
+                if (searchBar.value.length > 0) {
+                  clearButton.classList.remove('hidden');
+                } else {
+                  clearButton.classList.add('hidden');
+                }
+              });
+            
+              // Clear the search bar and hide the clear button when the user clicks it
+              clearButton.addEventListener('click', function() {
+                searchBar.value = '';
+                clearButton.classList.add('hidden');
+                searchBar.focus();
+              });
+            </script>
+            
+          </div>
         </div>
 
         
 
         <div
-          class="-mt-32 row-span-3 lg:col-span-3 col-span-5 rounded-2xl border-4 border-blue-800 "
+          class=" row-span-3 lg:col-span-3 col-span-5 rounded-2xl border-4 border-blue-800 "
         >
           <div class="flex flex-row flex-wrap">
             <div
